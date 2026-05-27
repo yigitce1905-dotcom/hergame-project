@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-Command node -ErrorAction SilentlyContinue; Get-Command npm -ErrorAction SilentlyContinue; $env:PATH -split ';' | Where-Object { $_ -match 'node|npm' })",
+      "Bash(npm --version)",
+      "Read(//c/Program Files/**)",
+      "Read(//c/Users/MSI/AppData/Roaming/**)",
+      "Read(//c/Users/MSI/**)",
+      "PowerShell(Get-ChildItem \"C:\\\\Program Files\\\\nodejs\" -ErrorAction SilentlyContinue; Get-ChildItem \"C:\\\\Program Files \\(x86\\)\\\\nodejs\" -ErrorAction SilentlyContinue; Get-ChildItem \"$env:APPDATA\\\\npm\" -ErrorAction SilentlyContinue; Get-ChildItem \"$env:LOCALAPPDATA\\\\Programs\\\\nodejs\" -ErrorAction SilentlyContinue)",
+      "Bash(npm install *)",
+      "PowerShell(npm install 2>&1)",
+      "PowerShell($env:PATH = \"C:\\\\Program Files\\\\nodejs;\" + $env:PATH; & \"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\" run dev 2>&1)",
+      "WebFetch(domain:www.soccerdonna.de)",
+      "WebFetch(domain:www.womensfootballfm.com)",
+      "Bash(python -m pip install google-generativeai --quiet)",
+      "Bash(python3 -m pip install google-generativeai --quiet)",
+      "Bash(where python *)",
+      "Bash(where python3 *)",
+      "Bash(where py *)",
+      "Bash(\"C:\\\\Users\\\\MSI\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\python.exe\" --version)",
+      "Bash(\"C:\\\\Users\\\\MSI\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\python.exe\" -m pip install google-generativeai requests beautifulsoup4 lxml --quiet)",
+      "Bash(\"C:\\\\Users\\\\MSI\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\python.exe\" scraper/hidden_gems_scraper.py --limit 3 --no-swot)",
+      "Bash('C:\\\\Users\\\\MSI\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\python.exe' -c ' *)",
+      "Bash(\"C:\\\\Users\\\\MSI\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\python.exe\" -m pip install google-genai --quiet)",
+      "Bash(del \"C:\\\\Users\\\\MSI\\\\Desktop\\\\hergame_project\\\\data\\\\hidden_gems_checkpoint.json\")",
+      "Bash(\"C:\\\\Users\\\\MSI\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\python.exe\" scraper/hidden_gems_scraper.py --limit 3)",
+      "Bash(del \"C:\\\\Users\\\\MSI\\\\Desktop\\\\hergame_project\\\\data\\\\hidden_gems.json\")",
+      "Bash(pip show *)",
+      "Bash(pip install *)",
+      "Bash(streamlit run *)",
+      "Bash(git --version)",
+      "Bash(git -C \"C:/Users/MSI/Desktop/hergame_project\" status)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
+    ]
+  }
+}

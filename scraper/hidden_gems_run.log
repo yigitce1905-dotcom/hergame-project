@@ -1,0 +1,542 @@
+18:01:17 [INFO] Session warm-up: HTTP 200
+18:01:18 [INFO] Mevcut 382 TUR1 oyuncusu yüklendi.
+18:01:19 [INFO] Gemini API hazýr. Model: gemini-flash-latest
+18:01:19 [INFO] Checkpoint yüklendi: 15 oyuncu tamamlandý.
+18:01:19 [INFO] [1/99] \u2500\u2500 Federica D'Auria (FM26: 90)
+18:01:19 [INFO]   \u2713 Zaten tamamlandý, atlandý.
+18:01:19 [INFO] [2/99] \u2500\u2500 Selma Panengstuen (FM26: 90)
+18:01:19 [INFO]   \u2713 Zaten tamamlandý, atlandý.
+18:01:19 [INFO] [3/99] \u2500\u2500 Marthine Østenstad (FM26: 86)
+18:01:19 [INFO]   \u2713 Zaten tamamlandý, atlandý.
+18:01:19 [INFO] [4/99] \u2500\u2500 Mia Authen (FM26: 85)
+18:01:19 [INFO]   \u2713 Zaten tamamlandý, atlandý.
+18:01:19 [INFO] [5/99] \u2500\u2500 Sara Hørte (FM26: 84)
+18:01:19 [INFO]   \u2713 Zaten tamamlandý, atlandý.
+18:01:19 [INFO] [6/99] \u2500\u2500 Mari Paz Vilas (FM26: 83)
+18:01:19 [INFO]   \u2713 Zaten tamamlandý, atlandý.
+18:01:19 [INFO] [7/99] \u2500\u2500 Thea Kyvåg (FM26: 83)
+18:01:19 [INFO]   \u2713 Zaten tamamlandý, atlandý.
+18:01:19 [INFO] [8/99] \u2500\u2500 Amy Gallacher (FM26: 83)
+18:01:19 [INFO]   \u2713 Zaten tamamlandý, atlandý.
+18:01:19 [INFO] [9/99] \u2500\u2500 Monique Ngock (FM26: 82)
+18:01:19 [INFO]   \u2713 Zaten tamamlandý, atlandý.
+18:01:19 [INFO] [10/99] \u2500\u2500 Emma Braut Brunes (FM26: 82)
+18:01:19 [INFO]   \u2713 Zaten tamamlandý, atlandý.
+18:01:19 [INFO] [11/99] \u2500\u2500 Alena Bienz (FM26: 81)
+18:01:19 [INFO]   \u2713 Zaten tamamlandý, atlandý.
+18:01:19 [INFO] [12/99] \u2500\u2500 Joanna Tynnilä (FM26: 81)
+18:01:19 [INFO]   \u2713 Zaten tamamlandý, atlandý.
+18:01:19 [INFO] [13/99] \u2500\u2500 Astrid Gilardi (FM26: 81)
+18:01:19 [INFO]   \u2713 Zaten tamamlandý, atlandý.
+18:01:19 [INFO] [14/99] \u2500\u2500 Hillary Diaz (FM26: 80)
+18:01:19 [INFO]   \u2713 Zaten tamamlandý, atlandý.
+18:01:19 [INFO] [15/99] \u2500\u2500 Annaëlle Tchakounté (FM26: 80)
+18:01:19 [INFO]   \u2713 Zaten tamamlandý, atlandý.
+18:01:19 [INFO] [16/99] \u2500\u2500 Lilli Purtscheller (FM26: 80)
+18:01:19 [INFO]   \u2192 SoccerDonna aramasý: 'Lilli'
+18:01:21 [INFO]   \u2192 16 aday bulundu.
+18:01:21 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Lilli Purtscheller
+18:01:21 [INFO]   (--no-swot: SWOT atlandý)
+18:01:21 [INFO]   \U0001f4be Checkpoint güncellendi (16/99)
+18:01:21 [INFO] [17/99] \u2500\u2500 Holly Ward (FM26: 79)
+18:01:21 [INFO]   \u2192 SoccerDonna aramasý: 'Holly'
+18:01:24 [INFO]   \u2192 24 aday bulundu.
+18:01:24 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Holly Ward
+18:01:24 [INFO]   (--no-swot: SWOT atlandý)
+18:01:24 [INFO]   \U0001f4be Checkpoint güncellendi (17/99)
+18:01:24 [INFO] [18/99] \u2500\u2500 Fiona Gaißer (FM26: 79)
+18:01:24 [INFO]   \u2192 SoccerDonna aramasý: 'Fiona'
+18:01:27 [INFO]   \u2192 12 aday bulundu.
+18:01:27 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Fiona Gaißer
+18:01:27 [INFO]   (--no-swot: SWOT atlandý)
+18:01:27 [INFO]   \U0001f4be Checkpoint güncellendi (18/99)
+18:01:27 [INFO] [19/99] \u2500\u2500 Elin Sørum (FM26: 78)
+18:01:27 [INFO]   \u2192 SoccerDonna aramasý: 'Elin'
+18:01:30 [INFO]   \u2192 387 aday bulundu.
+18:01:30 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Elin Sørum
+18:01:30 [INFO]   (--no-swot: SWOT atlandý)
+18:01:30 [INFO]   \U0001f4be Checkpoint güncellendi (19/99)
+18:01:30 [INFO] [20/99] \u2500\u2500 Elise Thorsnes (FM26: 78)
+18:01:30 [INFO]   \u2192 SoccerDonna aramasý: 'Elise'
+18:01:34 [INFO]   \u2192 16 aday bulundu.
+18:01:34 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Elise Thorsnes
+18:01:34 [INFO]   (--no-swot: SWOT atlandý)
+18:01:34 [INFO]   \U0001f4be Checkpoint güncellendi (20/99)
+18:01:34 [INFO] [21/99] \u2500\u2500 Beke Sterner (FM26: 78)
+18:01:34 [INFO]   \u2192 SoccerDonna aramasý: 'Beke'
+18:01:37 [INFO]   \u2192 1 aday bulundu.
+18:01:37 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Beke Sterner
+18:01:37 [INFO]   (--no-swot: SWOT atlandý)
+18:01:37 [INFO]   \U0001f4be Checkpoint güncellendi (21/99)
+18:01:37 [INFO] [22/99] \u2500\u2500 Julie Jorde (FM26: 78)
+18:01:37 [INFO]   \u2192 SoccerDonna aramasý: 'Julie'
+18:01:40 [INFO]   \u2192 97 aday bulundu.
+18:01:40 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Julie Jorde
+18:01:40 [INFO]   (--no-swot: SWOT atlandý)
+18:01:40 [INFO]   \U0001f4be Checkpoint güncellendi (22/99)
+18:01:40 [INFO] [23/99] \u2500\u2500 Manon Wahl (FM26: 78)
+18:01:40 [INFO]   \u2192 SoccerDonna aramasý: 'Manon'
+18:01:43 [INFO]   \u2192 9 aday bulundu.
+18:01:43 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Manon Wahl
+18:01:43 [INFO]   (--no-swot: SWOT atlandý)
+18:01:43 [INFO]   \U0001f4be Checkpoint güncellendi (23/99)
+18:01:43 [INFO] [24/99] \u2500\u2500 Anna Aahjem (FM26: 78)
+18:01:43 [INFO]   \u2192 SoccerDonna aramasý: 'Anna'
+18:01:47 [INFO]   \u2192 955 aday bulundu.
+18:01:47 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Anna Aahjem
+18:01:47 [INFO]   (--no-swot: SWOT atlandý)
+18:01:47 [INFO]   \U0001f4be Checkpoint güncellendi (24/99)
+18:01:47 [INFO] [25/99] \u2500\u2500 Josefine Birkelund (FM26: 77)
+18:01:47 [INFO]   \u2192 SoccerDonna aramasý: 'Josefine'
+18:01:50 [INFO]   \u2192 50 aday bulundu.
+18:01:50 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Josefine Birkelund
+18:01:50 [INFO]   (--no-swot: SWOT atlandý)
+18:01:50 [INFO]   \U0001f4be Checkpoint güncellendi (25/99)
+18:01:50 [INFO] [26/99] \u2500\u2500 Mille Ivi Christensen (FM26: 77)
+18:01:50 [INFO]   \u2192 SoccerDonna aramasý: 'Mille'
+18:01:53 [INFO]   \u2192 24 aday bulundu.
+18:01:53 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Mille Ivi Christensen
+18:01:53 [INFO]   (--no-swot: SWOT atlandý)
+18:01:53 [INFO]   \U0001f4be Checkpoint güncellendi (26/99)
+18:01:53 [INFO] [27/99] \u2500\u2500 Synne Aunehaugen (FM26: 77)
+18:01:53 [INFO]   \u2192 SoccerDonna aramasý: 'Synne'
+18:01:57 [INFO]   \u2192 3 aday bulundu.
+18:01:57 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Synne Aunehaugen
+18:01:57 [INFO]   (--no-swot: SWOT atlandý)
+18:01:57 [INFO]   \U0001f4be Checkpoint güncellendi (27/99)
+18:01:57 [INFO] [28/99] \u2500\u2500 Karoline Haugland (FM26: 77)
+18:01:57 [INFO]   \u2192 SoccerDonna aramasý: 'Karoline'
+18:01:59 [INFO]   \u2192 29 aday bulundu.
+18:01:59 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Karoline Haugland
+18:01:59 [INFO]   (--no-swot: SWOT atlandý)
+18:01:59 [INFO]   \U0001f4be Checkpoint güncellendi (28/99)
+18:01:59 [INFO] [29/99] \u2500\u2500 Stine Brekken (FM26: 77)
+18:01:59 [INFO]   \u2192 SoccerDonna aramasý: 'Stine'
+18:02:02 [INFO]   \u2192 116 aday bulundu.
+18:02:02 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Stine Brekken
+18:02:02 [INFO]   (--no-swot: SWOT atlandý)
+18:02:02 [INFO]   \U0001f4be Checkpoint güncellendi (29/99)
+18:02:02 [INFO] [30/99] \u2500\u2500 Eline Hegg (FM26: 77)
+18:02:02 [INFO]   \u2192 SoccerDonna aramasý: 'Eline'
+18:02:06 [INFO]   \u2192 129 aday bulundu.
+18:02:06 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Eline Hegg
+18:02:06 [INFO]   (--no-swot: SWOT atlandý)
+18:02:06 [INFO]   \U0001f4be Checkpoint güncellendi (30/99)
+18:02:06 [INFO] [31/99] \u2500\u2500 Jelena Karli\u010di\u0107 (FM26: 76)
+18:02:06 [INFO]   \u2713 Mevcut TUR1 veritabanýnda bulundu.
+18:02:06 [INFO]   (--no-swot: SWOT atlandý)
+18:02:06 [INFO]   \U0001f4be Checkpoint güncellendi (31/99)
+18:02:06 [INFO] [32/99] \u2500\u2500 Aurora Mikalsen (FM26: 76)
+18:02:06 [INFO]   \u2192 SoccerDonna aramasý: 'Aurora'
+18:02:09 [INFO]   \u2192 11 aday bulundu.
+18:02:09 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Aurora Mikalsen
+18:02:09 [INFO]   (--no-swot: SWOT atlandý)
+18:02:09 [INFO]   \U0001f4be Checkpoint güncellendi (32/99)
+18:02:09 [INFO] [33/99] \u2500\u2500 Sunniva Skoglund (FM26: 76)
+18:02:09 [INFO]   \u2192 SoccerDonna aramasý: 'Sunniva'
+18:02:12 [INFO]   \u2192 2 aday bulundu.
+18:02:12 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Sunniva Skoglund
+18:02:12 [INFO]   (--no-swot: SWOT atlandý)
+18:02:12 [INFO]   \U0001f4be Checkpoint güncellendi (33/99)
+18:02:12 [INFO] [34/99] \u2500\u2500 Sofia Reidy (FM26: 75)
+18:02:12 [INFO]   \u2192 SoccerDonna aramasý: 'Sofia'
+18:02:15 [INFO]   \u2192 78 aday bulundu.
+18:02:15 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Sofia Reidy
+18:02:15 [INFO]   (--no-swot: SWOT atlandý)
+18:02:15 [INFO]   \U0001f4be Checkpoint güncellendi (34/99)
+18:02:15 [INFO] [35/99] \u2500\u2500 Maïté Boucly (FM26: 75)
+18:02:15 [INFO]   \u2192 SoccerDonna aramasý: 'Maïté'
+18:02:18 [INFO]   \u2192 2 aday bulundu.
+18:02:18 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Maïté Boucly
+18:02:18 [INFO]   (--no-swot: SWOT atlandý)
+18:02:18 [INFO]   \U0001f4be Checkpoint güncellendi (35/99)
+18:02:18 [INFO] [36/99] \u2500\u2500 Maja Sternad (FM26: 75)
+18:02:18 [INFO]   \u2192 SoccerDonna aramasý: 'Maja'
+18:02:22 [INFO]   \u2192 105 aday bulundu.
+18:02:22 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Maja Sternad
+18:02:22 [INFO]   (--no-swot: SWOT atlandý)
+18:02:22 [INFO]   \U0001f4be Checkpoint güncellendi (36/99)
+18:02:22 [INFO] [37/99] \u2500\u2500 Monica Renzotti (FM26: 75)
+18:02:22 [INFO]   \u2192 SoccerDonna aramasý: 'Monica'
+18:02:25 [INFO]   \u2192 16 aday bulundu.
+18:02:25 [INFO]   \u2192 Eþleþme: Monica (https://www.soccerdonna.de/en/monica-ribeiro/profil/spieler_24759.html)
+18:02:27 [INFO]   (--no-swot: SWOT atlandý)
+18:02:27 [INFO]   \U0001f4be Checkpoint güncellendi (37/99)
+18:02:27 [INFO] [38/99] \u2500\u2500 Poppy Lawson (FM26: 74)
+18:02:27 [INFO]   \u2192 SoccerDonna aramasý: 'Poppy'
+18:02:31 [INFO]   \u2192 5 aday bulundu.
+18:02:31 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Poppy Lawson
+18:02:31 [INFO]   (--no-swot: SWOT atlandý)
+18:02:31 [INFO]   \U0001f4be Checkpoint güncellendi (38/99)
+18:02:31 [INFO] [39/99] \u2500\u2500 Julia Magerl (FM26: 74)
+18:02:31 [INFO]   \u2192 SoccerDonna aramasý: 'Julia'
+18:02:34 [INFO]   \u2192 317 aday bulundu.
+18:02:34 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Julia Magerl
+18:02:34 [INFO]   (--no-swot: SWOT atlandý)
+18:02:34 [INFO]   \U0001f4be Checkpoint güncellendi (39/99)
+18:02:34 [INFO] [40/99] \u2500\u2500 Selma Pettersen (FM26: 74)
+18:02:34 [INFO]   \u2192 SoccerDonna aramasý: 'Selma'
+18:02:37 [INFO]   \u2192 32 aday bulundu.
+18:02:37 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Selma Pettersen
+18:02:37 [INFO]   (--no-swot: SWOT atlandý)
+18:02:37 [INFO]   \U0001f4be Checkpoint güncellendi (40/99)
+18:02:37 [INFO] [41/99] \u2500\u2500 Julia Pollak (FM26: 74)
+18:02:37 [INFO]   \u2192 SoccerDonna aramasý: 'Julia'
+18:02:40 [INFO]   \u2192 317 aday bulundu.
+18:02:40 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Julia Pollak
+18:02:40 [INFO]   (--no-swot: SWOT atlandý)
+18:02:40 [INFO]   \U0001f4be Checkpoint güncellendi (41/99)
+18:02:40 [INFO] [42/99] \u2500\u2500 Maja Hagermann (FM26: 74)
+18:02:40 [INFO]   \u2192 SoccerDonna aramasý: 'Maja'
+18:02:43 [INFO]   \u2192 105 aday bulundu.
+18:02:43 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Maja Hagermann
+18:02:43 [INFO]   (--no-swot: SWOT atlandý)
+18:02:43 [INFO]   \U0001f4be Checkpoint güncellendi (42/99)
+18:02:43 [INFO] [43/99] \u2500\u2500 Duda Serrana (FM26: 73)
+18:02:43 [INFO]   \u2192 SoccerDonna aramasý: 'Duda'
+18:02:48 [INFO]   \u2192 0 aday bulundu.
+18:02:48 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Duda Serrana
+18:02:48 [INFO]   (--no-swot: SWOT atlandý)
+18:02:48 [INFO]   \U0001f4be Checkpoint güncellendi (43/99)
+18:02:48 [INFO] [44/99] \u2500\u2500 Emma Reshane (FM26: 71)
+18:02:48 [INFO]   \u2192 SoccerDonna aramasý: 'Emma'
+18:02:51 [INFO]   \u2192 282 aday bulundu.
+18:02:51 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Emma Reshane
+18:02:51 [INFO]   (--no-swot: SWOT atlandý)
+18:02:51 [INFO]   \U0001f4be Checkpoint güncellendi (44/99)
+18:02:51 [INFO] [45/99] \u2500\u2500 Lucie Calba (FM26: 71)
+18:02:51 [INFO]   \u2192 SoccerDonna aramasý: 'Lucie'
+18:02:54 [INFO]   \u2192 18 aday bulundu.
+18:02:54 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Lucie Calba
+18:02:54 [INFO]   (--no-swot: SWOT atlandý)
+18:02:54 [INFO]   \U0001f4be Checkpoint güncellendi (45/99)
+18:02:54 [INFO] [46/99] \u2500\u2500 Laura Pucks (FM26: 71)
+18:02:54 [INFO]   \u2192 SoccerDonna aramasý: 'Laura'
+18:02:58 [INFO]   \u2192 289 aday bulundu.
+18:02:58 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Laura Pucks
+18:02:58 [INFO]   (--no-swot: SWOT atlandý)
+18:02:58 [INFO]   \U0001f4be Checkpoint güncellendi (46/99)
+18:02:58 [INFO] [47/99] \u2500\u2500 Léa Notel (FM26: 71)
+18:02:58 [INFO]   \u2192 SoccerDonna aramasý: 'Léa'
+18:03:01 [INFO]   \u2192 234 aday bulundu.
+18:03:01 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Léa Notel
+18:03:01 [INFO]   (--no-swot: SWOT atlandý)
+18:03:01 [INFO]   \U0001f4be Checkpoint güncellendi (47/99)
+18:03:01 [INFO] [48/99] \u2500\u2500 Maria Grazia Petrara (FM26: 71)
+18:03:01 [INFO]   \u2192 SoccerDonna aramasý: 'Maria'
+18:03:04 [INFO]   \u2192 369 aday bulundu.
+18:03:04 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Maria Grazia Petrara
+18:03:04 [INFO]   (--no-swot: SWOT atlandý)
+18:03:04 [INFO]   \U0001f4be Checkpoint güncellendi (48/99)
+18:03:04 [INFO] [49/99] \u2500\u2500 Jenna Ferguson (FM26: 70)
+18:03:04 [INFO]   \u2192 SoccerDonna aramasý: 'Jenna'
+18:03:07 [INFO]   \u2192 24 aday bulundu.
+18:03:07 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Jenna Ferguson
+18:03:07 [INFO]   (--no-swot: SWOT atlandý)
+18:03:07 [INFO]   \U0001f4be Checkpoint güncellendi (49/99)
+18:03:07 [INFO] [50/99] \u2500\u2500 Macey Fraser (FM26: 70)
+18:03:07 [INFO]   \u2192 SoccerDonna aramasý: 'Macey'
+18:03:10 [INFO]   \u2192 3 aday bulundu.
+18:03:10 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Macey Fraser
+18:03:10 [INFO]   (--no-swot: SWOT atlandý)
+18:03:10 [INFO]   \U0001f4be Checkpoint güncellendi (50/99)
+18:03:10 [INFO] [51/99] \u2500\u2500 Silje Helgesen (FM26: 70)
+18:03:10 [INFO]   \u2192 SoccerDonna aramasý: 'Silje'
+18:03:13 [INFO]   \u2192 16 aday bulundu.
+18:03:13 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Silje Helgesen
+18:03:13 [INFO]   (--no-swot: SWOT atlandý)
+18:03:13 [INFO]   \U0001f4be Checkpoint güncellendi (51/99)
+18:03:13 [INFO] [52/99] \u2500\u2500 Tuana Mahmoud (FM26: 70)
+18:03:13 [INFO]   \u2192 SoccerDonna aramasý: 'Tuana'
+18:03:16 [INFO]   \u2192 4 aday bulundu.
+18:03:16 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Tuana Mahmoud
+18:03:16 [INFO]   (--no-swot: SWOT atlandý)
+18:03:16 [INFO]   \U0001f4be Checkpoint güncellendi (52/99)
+18:03:16 [INFO] [53/99] \u2500\u2500 Azzurra Gallo (FM26: 69)
+18:03:16 [INFO]   \u2192 SoccerDonna aramasý: 'Azzurra'
+18:03:20 [INFO]   \u2192 0 aday bulundu.
+18:03:20 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Azzurra Gallo
+18:03:20 [INFO]   (--no-swot: SWOT atlandý)
+18:03:20 [INFO]   \U0001f4be Checkpoint güncellendi (53/99)
+18:03:20 [INFO] [54/99] \u2500\u2500 Solveig Slemmem (FM26: 69)
+18:03:20 [INFO]   \u2192 SoccerDonna aramasý: 'Solveig'
+18:03:23 [INFO]   \u2192 5 aday bulundu.
+18:03:23 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Solveig Slemmem
+18:03:23 [INFO]   (--no-swot: SWOT atlandý)
+18:03:23 [INFO]   \U0001f4be Checkpoint güncellendi (54/99)
+18:03:23 [INFO] [55/99] \u2500\u2500 Nikayla Small (FM26: 69)
+18:03:23 [INFO]   \u2192 SoccerDonna aramasý: 'Nikayla'
+18:03:26 [INFO]   \u2192 0 aday bulundu.
+18:03:26 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Nikayla Small
+18:03:26 [INFO]   (--no-swot: SWOT atlandý)
+18:03:26 [INFO]   \U0001f4be Checkpoint güncellendi (55/99)
+18:03:26 [INFO] [56/99] \u2500\u2500 Natalia Oleszkiewicz (FM26: 69)
+18:03:26 [INFO]   \u2713 Mevcut TUR1 veritabanýnda bulundu.
+18:03:26 [INFO]   (--no-swot: SWOT atlandý)
+18:03:26 [INFO]   \U0001f4be Checkpoint güncellendi (56/99)
+18:03:26 [INFO] [57/99] \u2500\u2500 Laurel Ansbrow (FM26: 68)
+18:03:26 [INFO]   \u2192 SoccerDonna aramasý: 'Laurel'
+18:03:29 [INFO]   \u2192 1 aday bulundu.
+18:03:29 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Laurel Ansbrow
+18:03:29 [INFO]   (--no-swot: SWOT atlandý)
+18:03:29 [INFO]   \U0001f4be Checkpoint güncellendi (57/99)
+18:03:29 [INFO] [58/99] \u2500\u2500 Ilayda Açýkgöz (FM26: 68)
+18:03:29 [INFO]   \u2192 SoccerDonna aramasý: 'Ilayda'
+18:03:32 [INFO]   \u2192 2 aday bulundu.
+18:03:32 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Ilayda Açýkgöz
+18:03:32 [INFO]   (--no-swot: SWOT atlandý)
+18:03:32 [INFO]   \U0001f4be Checkpoint güncellendi (58/99)
+18:03:32 [INFO] [59/99] \u2500\u2500 Ronja Arnesen (FM26: 68)
+18:03:32 [INFO]   \u2192 SoccerDonna aramasý: 'Ronja'
+18:03:35 [INFO]   \u2192 35 aday bulundu.
+18:03:35 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Ronja Arnesen
+18:03:35 [INFO]   (--no-swot: SWOT atlandý)
+18:03:35 [INFO]   \U0001f4be Checkpoint güncellendi (59/99)
+18:03:35 [INFO] [60/99] \u2500\u2500 Nelly Da Cruz Rodrigues (FM26: 67)
+18:03:35 [INFO]   \u2192 SoccerDonna aramasý: 'Nelly'
+18:03:39 [INFO]   \u2192 15 aday bulundu.
+18:03:39 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Nelly Da Cruz Rodrigues
+18:03:39 [INFO]   (--no-swot: SWOT atlandý)
+18:03:39 [INFO]   \U0001f4be Checkpoint güncellendi (60/99)
+18:03:39 [INFO] [61/99] \u2500\u2500 Katja Skupie\u0144 (FM26: 67)
+18:03:39 [INFO]   \u2192 SoccerDonna aramasý: 'Katja'
+18:03:41 [INFO]   \u2192 33 aday bulundu.
+18:03:41 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Katja Skupie\u0144
+18:03:41 [INFO]   (--no-swot: SWOT atlandý)
+18:03:41 [INFO]   \U0001f4be Checkpoint güncellendi (61/99)
+18:03:41 [INFO] [62/99] \u2500\u2500 Bente Fischer (FM26: 67)
+18:03:41 [INFO]   \u2192 SoccerDonna aramasý: 'Bente'
+18:03:44 [INFO]   \u2192 6 aday bulundu.
+18:03:44 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Bente Fischer
+18:03:44 [INFO]   (--no-swot: SWOT atlandý)
+18:03:44 [INFO]   \U0001f4be Checkpoint güncellendi (62/99)
+18:03:44 [INFO] [63/99] \u2500\u2500 Bruna Ramos (FM26: 67)
+18:03:44 [INFO]   \u2192 SoccerDonna aramasý: 'Bruna'
+18:03:46 [INFO]   \u2192 1 aday bulundu.
+18:03:46 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Bruna Ramos
+18:03:46 [INFO]   (--no-swot: SWOT atlandý)
+18:03:46 [INFO]   \U0001f4be Checkpoint güncellendi (63/99)
+18:03:46 [INFO] [64/99] \u2500\u2500 Julia J\u0119drzejewska (FM26: 67)
+18:03:46 [INFO]   \u2192 SoccerDonna aramasý: 'Julia'
+18:03:50 [INFO]   \u2192 317 aday bulundu.
+18:03:50 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Julia J\u0119drzejewska
+18:03:50 [INFO]   (--no-swot: SWOT atlandý)
+18:03:50 [INFO]   \U0001f4be Checkpoint güncellendi (64/99)
+18:03:50 [INFO] [65/99] \u2500\u2500 Meret Günster (FM26: 67)
+18:03:50 [INFO]   \u2192 SoccerDonna aramasý: 'Meret'
+18:03:53 [INFO]   \u2192 4 aday bulundu.
+18:03:53 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Meret Günster
+18:03:53 [INFO]   (--no-swot: SWOT atlandý)
+18:03:53 [INFO]   \U0001f4be Checkpoint güncellendi (65/99)
+18:03:53 [INFO] [66/99] \u2500\u2500 Kristin Krammer (FM26: 67)
+18:03:53 [INFO]   \u2192 SoccerDonna aramasý: 'Kristin'
+18:03:56 [INFO]   \u2192 127 aday bulundu.
+18:03:56 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Kristin Krammer
+18:03:56 [INFO]   (--no-swot: SWOT atlandý)
+18:03:56 [INFO]   \U0001f4be Checkpoint güncellendi (66/99)
+18:03:56 [INFO] [67/99] \u2500\u2500 Hannah Mesch (FM26: 67)
+18:03:56 [INFO]   \u2192 SoccerDonna aramasý: 'Hannah'
+18:03:59 [INFO]   \u2192 153 aday bulundu.
+18:03:59 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Hannah Mesch
+18:03:59 [INFO]   (--no-swot: SWOT atlandý)
+18:03:59 [INFO]   \U0001f4be Checkpoint güncellendi (67/99)
+18:03:59 [INFO] [68/99] \u2500\u2500 Magnaba Folquet (FM26: 67)
+18:03:59 [INFO]   \u2192 SoccerDonna aramasý: 'Magnaba'
+18:04:03 [INFO]   \u2192 0 aday bulundu.
+18:04:03 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Magnaba Folquet
+18:04:03 [INFO]   (--no-swot: SWOT atlandý)
+18:04:03 [INFO]   \U0001f4be Checkpoint güncellendi (68/99)
+18:04:03 [INFO] [69/99] \u2500\u2500 Carla Tays (FM26: 66)
+18:04:03 [INFO]   \u2192 SoccerDonna aramasý: 'Carla'
+18:04:06 [INFO]   \u2192 45 aday bulundu.
+18:04:06 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Carla Tays
+18:04:06 [INFO]   (--no-swot: SWOT atlandý)
+18:04:06 [INFO]   \U0001f4be Checkpoint güncellendi (69/99)
+18:04:06 [INFO] [70/99] \u2500\u2500 Natalia Radkiewicz (FM26: 66)
+18:04:06 [INFO]   \u2192 SoccerDonna aramasý: 'Natalia'
+18:04:09 [INFO]   \u2192 43 aday bulundu.
+18:04:09 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Natalia Radkiewicz
+18:04:09 [INFO]   (--no-swot: SWOT atlandý)
+18:04:09 [INFO]   \U0001f4be Checkpoint güncellendi (70/99)
+18:04:09 [INFO] [71/99] \u2500\u2500 Paula Flach (FM26: 65)
+18:04:09 [INFO]   \u2192 SoccerDonna aramasý: 'Paula'
+18:04:12 [INFO]   \u2192 93 aday bulundu.
+18:04:12 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Paula Flach
+18:04:12 [INFO]   (--no-swot: SWOT atlandý)
+18:04:12 [INFO]   \U0001f4be Checkpoint güncellendi (71/99)
+18:04:12 [INFO] [72/99] \u2500\u2500 Clara Wibaut (FM26: 65)
+18:04:12 [INFO]   \u2192 SoccerDonna aramasý: 'Clara'
+18:04:15 [INFO]   \u2192 74 aday bulundu.
+18:04:15 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Clara Wibaut
+18:04:15 [INFO]   (--no-swot: SWOT atlandý)
+18:04:15 [INFO]   \U0001f4be Checkpoint güncellendi (72/99)
+18:04:15 [INFO] [73/99] \u2500\u2500 Diána Németh (FM26: 65)
+18:04:15 [INFO]   \u2192 SoccerDonna aramasý: 'Diána'
+18:04:18 [INFO]   \u2192 34 aday bulundu.
+18:04:18 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Diána Németh
+18:04:18 [INFO]   (--no-swot: SWOT atlandý)
+18:04:18 [INFO]   \U0001f4be Checkpoint güncellendi (73/99)
+18:04:18 [INFO] [74/99] \u2500\u2500 Adriana Achci\u0144ska (FM26: 65)
+18:04:18 [INFO]   \u2192 SoccerDonna aramasý: 'Adriana'
+18:04:21 [INFO]   \u2192 21 aday bulundu.
+18:04:21 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Adriana Achci\u0144ska
+18:04:21 [INFO]   (--no-swot: SWOT atlandý)
+18:04:21 [INFO]   \U0001f4be Checkpoint güncellendi (74/99)
+18:04:21 [INFO] [75/99] \u2500\u2500 Rebekka Salfelder (FM26: 65)
+18:04:21 [INFO]   \u2192 SoccerDonna aramasý: 'Rebekka'
+18:04:24 [INFO]   \u2192 17 aday bulundu.
+18:04:24 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Rebekka Salfelder
+18:04:24 [INFO]   (--no-swot: SWOT atlandý)
+18:04:24 [INFO]   \U0001f4be Checkpoint güncellendi (75/99)
+18:04:24 [INFO] [76/99] \u2500\u2500 Nina Varga (FM26: 64)
+18:04:24 [INFO]   \u2192 SoccerDonna aramasý: 'Nina'
+18:04:27 [INFO]   \u2192 161 aday bulundu.
+18:04:27 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Nina Varga
+18:04:27 [INFO]   (--no-swot: SWOT atlandý)
+18:04:27 [INFO]   \U0001f4be Checkpoint güncellendi (76/99)
+18:04:27 [INFO] [77/99] \u2500\u2500 Ana Sušak (FM26: 64)
+18:04:27 [INFO]   \u2192 SoccerDonna aramasý: 'Ana'
+18:04:31 [INFO]   \u2192 572 aday bulundu.
+18:04:31 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Ana Sušak
+18:04:31 [INFO]   (--no-swot: SWOT atlandý)
+18:04:31 [INFO]   \U0001f4be Checkpoint güncellendi (77/99)
+18:04:31 [INFO] [78/99] \u2500\u2500 Julie Swierot (FM26: 64)
+18:04:31 [INFO]   \u2192 SoccerDonna aramasý: 'Julie'
+18:04:34 [INFO]   \u2192 97 aday bulundu.
+18:04:34 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Julie Swierot
+18:04:34 [INFO]   (--no-swot: SWOT atlandý)
+18:04:34 [INFO]   \U0001f4be Checkpoint güncellendi (78/99)
+18:04:34 [INFO] [79/99] \u2500\u2500 Nina Kajzba (FM26: 64)
+18:04:34 [INFO]   \u2192 SoccerDonna aramasý: 'Nina'
+18:04:37 [INFO]   \u2192 161 aday bulundu.
+18:04:37 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Nina Kajzba
+18:04:37 [INFO]   (--no-swot: SWOT atlandý)
+18:04:37 [INFO]   \U0001f4be Checkpoint güncellendi (79/99)
+18:04:37 [INFO] [80/99] \u2500\u2500 Reese Tappan (FM26: 64)
+18:04:37 [INFO]   \u2192 SoccerDonna aramasý: 'Reese'
+18:04:40 [INFO]   \u2192 2 aday bulundu.
+18:04:40 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Reese Tappan
+18:04:40 [INFO]   (--no-swot: SWOT atlandý)
+18:04:40 [INFO]   \U0001f4be Checkpoint güncellendi (80/99)
+18:04:40 [INFO] [81/99] \u2500\u2500 Julia Mickenhagen (FM26: 64)
+18:04:40 [INFO]   \u2192 SoccerDonna aramasý: 'Julia'
+18:04:43 [INFO]   \u2192 317 aday bulundu.
+18:04:43 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Julia Mickenhagen
+18:04:43 [INFO]   (--no-swot: SWOT atlandý)
+18:04:43 [INFO]   \U0001f4be Checkpoint güncellendi (81/99)
+18:04:43 [INFO] [82/99] \u2500\u2500 Rose Kadzere (FM26: 63)
+18:04:43 [INFO]   \u2192 SoccerDonna aramasý: 'Rose'
+18:04:46 [INFO]   \u2192 21 aday bulundu.
+18:04:46 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Rose Kadzere
+18:04:46 [INFO]   (--no-swot: SWOT atlandý)
+18:04:46 [INFO]   \U0001f4be Checkpoint güncellendi (82/99)
+18:04:46 [INFO] [83/99] \u2500\u2500 Barbara \u017divkovi\u0107 (FM26: 63)
+18:04:46 [INFO]   \u2192 SoccerDonna aramasý: 'Barbara'
+18:04:50 [INFO]   \u2192 41 aday bulundu.
+18:04:50 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Barbara \u017divkovi\u0107
+18:04:50 [INFO]   (--no-swot: SWOT atlandý)
+18:04:50 [INFO]   \U0001f4be Checkpoint güncellendi (83/99)
+18:04:50 [INFO] [84/99] \u2500\u2500 Manuela Sciabica (FM26: 63)
+18:04:50 [INFO]   \u2192 SoccerDonna aramasý: 'Manuela'
+18:04:53 [INFO]   \u2192 21 aday bulundu.
+18:04:53 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Manuela Sciabica
+18:04:53 [INFO]   (--no-swot: SWOT atlandý)
+18:04:53 [INFO]   \U0001f4be Checkpoint güncellendi (84/99)
+18:04:53 [INFO] [85/99] \u2500\u2500 Fanney Birkisdóttir (FM26: 63)
+18:04:53 [INFO]   \u2192 SoccerDonna aramasý: 'Fanney'
+18:04:55 [INFO]   \u2192 5 aday bulundu.
+18:04:55 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Fanney Birkisdóttir
+18:04:55 [INFO]   (--no-swot: SWOT atlandý)
+18:04:55 [INFO]   \U0001f4be Checkpoint güncellendi (85/99)
+18:04:55 [INFO] [86/99] \u2500\u2500 Shukurath Oladipo (FM26: 62)
+18:04:55 [INFO]   \u2192 SoccerDonna aramasý: 'Shukurath'
+18:05:00 [INFO]   \u2192 0 aday bulundu.
+18:05:00 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Shukurath Oladipo
+18:05:00 [INFO]   (--no-swot: SWOT atlandý)
+18:05:00 [INFO]   \U0001f4be Checkpoint güncellendi (86/99)
+18:05:00 [INFO] [87/99] \u2500\u2500 Mana Lamine (FM26: 62)
+18:05:00 [INFO]   \u2192 SoccerDonna aramasý: 'Mana'
+18:05:03 [INFO]   \u2192 10 aday bulundu.
+18:05:03 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Mana Lamine
+18:05:03 [INFO]   (--no-swot: SWOT atlandý)
+18:05:03 [INFO]   \U0001f4be Checkpoint güncellendi (87/99)
+18:05:03 [INFO] [88/99] \u2500\u2500 Melina Reuter (FM26: 60)
+18:05:03 [INFO]   \u2192 SoccerDonna aramasý: 'Melina'
+18:05:07 [INFO]   \u2192 30 aday bulundu.
+18:05:07 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Melina Reuter
+18:05:07 [INFO]   (--no-swot: SWOT atlandý)
+18:05:07 [INFO]   \U0001f4be Checkpoint güncellendi (88/99)
+18:05:07 [INFO] [89/99] \u2500\u2500 Ellie Gilbert (FM26: 60)
+18:05:07 [INFO]   \u2192 SoccerDonna aramasý: 'Ellie'
+18:05:10 [INFO]   \u2192 54 aday bulundu.
+18:05:10 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Ellie Gilbert
+18:05:10 [INFO]   (--no-swot: SWOT atlandý)
+18:05:10 [INFO]   \U0001f4be Checkpoint güncellendi (89/99)
+18:05:10 [INFO] [90/99] \u2500\u2500 Manon Le Page (FM26: 60)
+18:05:10 [INFO]   \u2192 SoccerDonna aramasý: 'Manon'
+18:05:13 [INFO]   \u2192 9 aday bulundu.
+18:05:13 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Manon Le Page
+18:05:13 [INFO]   (--no-swot: SWOT atlandý)
+18:05:13 [INFO]   \U0001f4be Checkpoint güncellendi (90/99)
+18:05:13 [INFO] [91/99] \u2500\u2500 Sofia Määttä (FM26: 59)
+18:05:13 [INFO]   \u2192 SoccerDonna aramasý: 'Sofia'
+18:05:16 [INFO]   \u2192 78 aday bulundu.
+18:05:16 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Sofia Määttä
+18:05:16 [INFO]   (--no-swot: SWOT atlandý)
+18:05:16 [INFO]   \U0001f4be Checkpoint güncellendi (91/99)
+18:05:16 [INFO] [92/99] \u2500\u2500 Savanna Duffy (FM26: 57)
+18:05:16 [INFO]   \u2192 SoccerDonna aramasý: 'Savanna'
+18:05:19 [INFO]   \u2192 5 aday bulundu.
+18:05:19 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Savanna Duffy
+18:05:19 [INFO]   (--no-swot: SWOT atlandý)
+18:05:19 [INFO]   \U0001f4be Checkpoint güncellendi (92/99)
+18:05:19 [INFO] [93/99] \u2500\u2500 Carina Wik Alfredsen (FM26: 57)
+18:05:19 [INFO]   \u2192 SoccerDonna aramasý: 'Carina'
+18:05:23 [INFO]   \u2192 68 aday bulundu.
+18:05:23 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Carina Wik Alfredsen
+18:05:23 [INFO]   (--no-swot: SWOT atlandý)
+18:05:23 [INFO]   \U0001f4be Checkpoint güncellendi (93/99)
+18:05:23 [INFO] [94/99] \u2500\u2500 Liu Yanqiu (FM26: 55)
+18:05:23 [INFO]   \u2192 SoccerDonna aramasý: 'Liu'
+18:05:26 [INFO]   \u2192 2 aday bulundu.
+18:05:26 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Liu Yanqiu
+18:05:26 [INFO]   (--no-swot: SWOT atlandý)
+18:05:26 [INFO]   \U0001f4be Checkpoint güncellendi (94/99)
+18:05:26 [INFO] [95/99] \u2500\u2500 Jasmin Mansaray (FM26: 53)
+18:05:26 [INFO]   \u2192 SoccerDonna aramasý: 'Jasmin'
+18:05:29 [INFO]   \u2192 91 aday bulundu.
+18:05:29 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Jasmin Mansaray
+18:05:29 [INFO]   (--no-swot: SWOT atlandý)
+18:05:29 [INFO]   \U0001f4be Checkpoint güncellendi (95/99)
+18:05:29 [INFO] [96/99] \u2500\u2500 Jo-Anne Conquist (FM26: 52)
+18:05:29 [INFO]   \u2192 SoccerDonna aramasý: 'Jo-Anne'
+18:05:33 [INFO]   \u2192 0 aday bulundu.
+18:05:33 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Jo-Anne Conquist
+18:05:33 [INFO]   (--no-swot: SWOT atlandý)
+18:05:33 [INFO]   \U0001f4be Checkpoint güncellendi (96/99)
+18:05:33 [INFO] [97/99] \u2500\u2500 Carolina Pimenta (FM26: 52)
+18:05:33 [INFO]   \u2192 SoccerDonna aramasý: 'Carolina'
+18:05:36 [INFO]   \u2192 11 aday bulundu.
+18:05:36 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Carolina Pimenta
+18:05:36 [INFO]   (--no-swot: SWOT atlandý)
+18:05:36 [INFO]   \U0001f4be Checkpoint güncellendi (97/99)
+18:05:36 [INFO] [98/99] \u2500\u2500 Magdalena Sobal (FM26: 51)
+18:05:36 [INFO]   \u2192 SoccerDonna aramasý: 'Magdalena'
+18:05:40 [INFO]   \u2192 44 aday bulundu.
+18:05:40 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Magdalena Sobal
+18:05:40 [INFO]   (--no-swot: SWOT atlandý)
+18:05:40 [INFO]   \U0001f4be Checkpoint güncellendi (98/99)
+18:05:40 [INFO] [99/99] \u2500\u2500 Angel Gurhem (FM26: 50)
+18:05:40 [INFO]   \u2192 SoccerDonna aramasý: 'Angel'
+18:05:43 [INFO]   \u2192 87 aday bulundu.
+18:05:43 [WARNING]   \u26a0 SoccerDonna'da bulunamadý: Angel Gurhem
+18:05:43 [INFO]   (--no-swot: SWOT atlandý)
+18:05:43 [INFO]   \U0001f4be Checkpoint güncellendi (99/99)
+18:05:43 [INFO] === Tamamlandý: 99 oyuncu iþlendi ===
+18:05:43 [INFO] JSON \u2192 C:\Users\MSI\Desktop\hergame_project\data\hidden_gems.json (99 oyuncu)
+18:05:43 [INFO] TypeScript \u2192 C:\Users\MSI\Desktop\hergame_project\src\data\hidden_gems.ts
+18:05:43 [INFO] \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+18:05:43 [INFO] \u2705 99 oyuncu kaydedildi
+18:05:43 [INFO]    SoccerDonna'da bulundu : 3
+18:05:43 [INFO]    SWOT analizi üretildi  : 14
+18:05:43 [INFO] Checkpoint silindi (tamamlandý).

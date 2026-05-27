@@ -1,0 +1,30 @@
+{
+  "name": "hergame",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "scrape": "cd scraper && python soccerdonna_scraper.py",
+    "scrape:tur": "cd scraper && python soccerdonna_scraper.py --leagues TUR1",
+    "scrape:top5": "cd scraper && python soccerdonna_scraper.py --leagues ENG1 ESP1 FRA1 GER1 USA1",
+    "convert": "cd scraper && python json_to_app.py",
+    "data:refresh": "npm run scrape && npm run convert"
+  },
+  "dependencies": {
+    "next": "14.2.3",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  }
+}
