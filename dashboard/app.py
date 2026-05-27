@@ -687,7 +687,7 @@ def main() -> None:
             <div class="pmeta">
                 🏟 {team}
                 &nbsp;·&nbsp; 📋 {pr['position']}
-                &nbsp;·&nbsp; {lig_label}
+                &nbsp;·&nbsp; {league_label}
                 &nbsp;·&nbsp; {pr['matches']} maç
             </div>
         </div>
