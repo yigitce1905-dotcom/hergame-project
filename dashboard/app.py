@@ -542,8 +542,17 @@ def main() -> None:
             st.warning(f"⚠️ ≥ {MIN_MATCHES} maç oynayan oyuncu bulunamadı.")
             st.stop()
 
-        # 5) Oyuncu seçimi
-        player_name = st.selectbox("👤 Oyuncu", player_pool["player"].tolist())
+        # 5) Oyuncu arama + seçimi
+        search = st.text_input("🔍 Oyuncu ara", placeholder="ör. Morgan, Harder…")
+        matched = player_pool[
+            player_pool["player"].str.contains(search, case=False, na=False)
+        ]["player"].tolist() if search else player_pool["player"].tolist()
+
+        if not matched:
+            st.warning("Arama sonucu bulunamadı.")
+            st.stop()
+
+        player_name = st.selectbox("👤 Oyuncu", matched)
 
         st.markdown("---")
         st.caption(
