@@ -167,6 +167,67 @@ def fetch_matches(comp_id: int, season_id: int) -> pd.DataFrame:
 
 
 @st.cache_data(ttl=86_400, show_spinner=False)
+def build_global_player_index() -> pd.DataFrame:
+    """
+    5 ligin tüm maçlarının lineup dosyalarından global oyuncu indeksi oluşturur.
+
+    Neden lineup? Events dosyaları 1-5 MB iken lineup dosyaları ~5-20 KB.
+    500 maç × lineup = ~10 sn  (ilk seferinde)
+    500 maç × events = ~30 dk  (asla yapma!)
+
+    Dönen tablo: player | team | league_label | competition_id | season_id
+    """
+    comps = fetch_competitions()
+
+    # Tüm liglerin tüm maç ID'lerini topla
+    tasks = []
+    for _, comp in comps.iterrows():
+        try:
+            matches = fetch_matches(int(comp["competition_id"]), int(comp["season_id"]))
+            for _, m in matches.iterrows():
+                tasks.append({
+                    "match_id":       int(m["match_id"]),
+                    "league_label":   comp["label"],
+                    "competition_id": int(comp["competition_id"]),
+                    "season_id":      int(comp["season_id"]),
+                })
+        except Exception:
+            pass
+
+    def _load_lineup(task: dict):
+        """Bir maçın lineup verisini çekip oyuncu kayıtlarına dönüştürür."""
+        try:
+            lineups = sb.lineups(match_id=task["match_id"])
+            rows = []
+            for team_name, lineup_df in lineups.items():
+                for _, p in lineup_df.iterrows():
+                    rows.append({
+                        "player":         p["player_name"],
+                        "team":           team_name,
+                        "league_label":   task["league_label"],
+                        "competition_id": task["competition_id"],
+                        "season_id":      task["season_id"],
+                    })
+            return rows
+        except Exception:
+            return []
+
+    all_rows = []
+    # 16 thread: lineup dosyaları küçük olduğu için daha agresif parallellik
+    with ThreadPoolExecutor(max_workers=16) as pool:
+        for result in as_completed([pool.submit(_load_lineup, t) for t in tasks]):
+            all_rows.extend(result.result())
+
+    if not all_rows:
+        return pd.DataFrame()
+
+    df = pd.DataFrame(all_rows)
+    # Aynı oyuncu + takım kombinasyonunu tek satıra indir
+    df = df.drop_duplicates(subset=["player", "team"]).sort_values("player")
+    return df.reset_index(drop=True)
+
+
+@st.cache_data(ttl=86_400, show_spinner=False)
 def fetch_team_events(comp_id: int, season_id: int, team: str) -> pd.DataFrame:
     """
     Seçilen takımın tüm maçlarını **paralel** olarak çeker
@@ -484,54 +545,76 @@ def main() -> None:
         unsafe_allow_html=True,
     )
 
-    # ── YAN PANEL: Lig → Takım → Oyuncu seçimi ───────────────────
+    # ── YAN PANEL: Global arama ───────────────────────────────────
     with st.sidebar:
-        st.markdown("## 🔍 Oyuncu Seç")
+        st.markdown("## 🔍 Oyuncu Ara")
 
-        # 1) Lig seçimi
-        with st.spinner("Lig listesi yükleniyor…"):
-            comps = fetch_competitions()
+        # Global oyuncu indeksini yükle (lineup'lardan, önbellekli)
+        # İlk seferinde ~10-15 sn, sonrası anında
+        idx_placeholder = st.empty()
+        idx_placeholder.caption("⏳ Oyuncu listesi hazırlanıyor…")
+        player_index = build_global_player_index()
+        idx_placeholder.empty()
 
-        if comps.empty:
-            st.error("❌ Lig verisi alınamadı. İnternet bağlantınızı kontrol edin.")
+        if player_index.empty:
+            st.error("❌ Oyuncu verisi alınamadı.")
             st.stop()
 
-        lig_label = st.selectbox("🏆 Lig", comps["label"].tolist())
-
-        sel_comp  = comps[comps["label"] == lig_label].iloc[0]
-        comp_id   = int(sel_comp["competition_id"])
-        season_id = int(sel_comp["season_id"])
-
-        # 2) Takım seçimi
-        with st.spinner("Maç listesi yükleniyor…"):
-            matches = fetch_matches(comp_id, season_id)
-
-        teams = sorted(
-            set(matches["home_team"].tolist() + matches["away_team"].tolist())
+        # ── Arama kutusu ─────────────────────────────────────────
+        search = st.text_input(
+            "İsim veya takım",
+            placeholder="ör. Morgan, Harder, Chelsea, Madrid…",
         )
-        team = st.selectbox("🏟 Takım", teams)
 
+        # Hem oyuncu adı hem takım adında ara
+        if search.strip():
+            mask = (
+                player_index["player"].str.contains(search, case=False, na=False)
+                | player_index["team"].str.contains(search, case=False, na=False)
+            )
+            results = player_index[mask].reset_index(drop=True)
+        else:
+            results = player_index
+
+        st.caption(f"{len(results)} oyuncu listeleniyor")
+
+        if results.empty:
+            st.warning("⚠️ Sonuç bulunamadı.")
+            st.stop()
+
+        # Seçenekleri "Ad · Takım  (Lig)" formatında göster
+        display_options = [
+            f"{r['player']}  ·  {r['team']}  ({r['league_label']})"
+            for _, r in results.iterrows()
+        ]
+        chosen = st.selectbox("👤 Seç", display_options, label_visibility="collapsed")
+        chosen_idx   = display_options.index(chosen)
+        chosen_row   = results.iloc[chosen_idx]
+
+        # Seçimden lig/takım bilgilerini otomatik çöz
+        player_name  = chosen_row["player"]
+        team         = chosen_row["team"]
+        comp_id      = int(chosen_row["competition_id"])
+        season_id    = int(chosen_row["season_id"])
+        league_label = chosen_row["league_label"]
+
+        # ── Seçilen oyuncunun takım verilerini yükle ─────────────
+        matches       = fetch_matches(comp_id, season_id)
         n_team_matches = int(
             ((matches["home_team"] == team) | (matches["away_team"] == team)).sum()
         )
-        st.caption(
-            f"📦 {n_team_matches} maç · "
-            f"ilk yükleme ~{n_team_matches * 2} sn sürebilir"
-        )
+        st.caption(f"📦 {team} · {n_team_matches} maç")
 
-        # 3) Olayları çek (önbelleklenmiş)
-        with st.spinner(f"'{team}' verileri işleniyor…"):
+        with st.spinner(f"'{team}' verileri yükleniyor…"):
             events = fetch_team_events(comp_id, season_id, team)
 
         if events.empty:
-            st.warning("⚠️ Bu takım için event verisi bulunamadı.")
+            st.warning("⚠️ Bu takım için veri bulunamadı.")
             st.stop()
 
-        # 4) İstatistikleri hesapla
         with st.spinner("İstatistikler hesaplanıyor…"):
             all_stats = compute_player_stats(events)
 
-        # Minimum maç filtresini uygula
         player_pool = (
             all_stats[all_stats["matches"] >= MIN_MATCHES]
             .sort_values("player")
@@ -542,17 +625,10 @@ def main() -> None:
             st.warning(f"⚠️ ≥ {MIN_MATCHES} maç oynayan oyuncu bulunamadı.")
             st.stop()
 
-        # 5) Oyuncu arama + seçimi
-        search = st.text_input("🔍 Oyuncu ara", placeholder="ör. Morgan, Harder…")
-        matched = player_pool[
-            player_pool["player"].str.contains(search, case=False, na=False)
-        ]["player"].tolist() if search else player_pool["player"].tolist()
-
-        if not matched:
-            st.warning("Arama sonucu bulunamadı.")
-            st.stop()
-
-        player_name = st.selectbox("👤 Oyuncu", matched)
+        # Seçilen oyuncu bu takımda yoksa en yakın eşleşmeyi bul
+        if player_name not in player_pool["player"].values:
+            st.info(f"ℹ️ {player_name} bu sezonda {MIN_MATCHES}+ maç oynamamış.")
+            player_name = player_pool["player"].iloc[0]
 
         st.markdown("---")
         st.caption(
