@@ -545,66 +545,95 @@ def main() -> None:
         unsafe_allow_html=True,
     )
 
-    # ── YAN PANEL: Global arama ───────────────────────────────────
+    # ── YAN PANEL ─────────────────────────────────────────────────
     with st.sidebar:
-        st.markdown("## 🔍 Oyuncu Ara")
+        st.markdown("## 🔍 Oyuncu Seç")
 
-        # Global oyuncu indeksini yükle (lineup'lardan, önbellekli)
-        # İlk seferinde ~10-15 sn, sonrası anında
-        idx_placeholder = st.empty()
-        idx_placeholder.caption("⏳ Oyuncu listesi hazırlanıyor…")
-        player_index = build_global_player_index()
-        idx_placeholder.empty()
-
-        if player_index.empty:
-            st.error("❌ Oyuncu verisi alınamadı.")
-            st.stop()
-
-        # ── Arama kutusu ─────────────────────────────────────────
+        # ── Global arama kutusu (her zaman görünür) ───────────────
         search = st.text_input(
-            "İsim veya takım",
-            placeholder="ör. Morgan, Harder, Chelsea, Madrid…",
+            "🔎 İsimle ara",
+            placeholder="Putellas, Morgan, Hemp…",
+            help="Tüm 5 ligde arar. Boş bırakırsan aşağıdan lig/takım seçebilirsin.",
         )
 
-        # Hem oyuncu adı hem takım adında ara
         if search.strip():
+            # ══ ARAMA MODU ══════════════════════════════════════════
+            with st.spinner("Oyuncu listesi yükleniyor…"):
+                player_index = build_global_player_index()
+
+            if player_index.empty:
+                st.error("❌ Oyuncu verisi alınamadı.")
+                st.stop()
+
             mask = (
                 player_index["player"].str.contains(search, case=False, na=False)
                 | player_index["team"].str.contains(search, case=False, na=False)
             )
             results = player_index[mask].reset_index(drop=True)
+
+            if results.empty:
+                st.warning(f"⚠️ '{search}' için sonuç bulunamadı.")
+                st.stop()
+
+            st.caption(f"{len(results)} sonuç")
+
+            opts = [
+                f"{r['player']}  ·  {r['team']}  ({r['league_label']})"
+                for _, r in results.iterrows()
+            ]
+            chosen     = st.selectbox("👤", opts, label_visibility="collapsed")
+            chosen_row = results.iloc[opts.index(chosen)]
+
+            player_name  = chosen_row["player"]
+            team         = chosen_row["team"]
+            comp_id      = int(chosen_row["competition_id"])
+            season_id    = int(chosen_row["season_id"])
+            league_label = chosen_row["league_label"]
+
         else:
-            results = player_index
+            # ══ LİG / TAKIM / OYUNCU SEÇİCİ MODU ═══════════════════
+            st.markdown(
+                "<div style='color:#6e7681;font-size:11px;text-align:center;"
+                "padding:2px 0 10px;'>— veya seçicilerden seç —</div>",
+                unsafe_allow_html=True,
+            )
 
-        st.caption(f"{len(results)} oyuncu listeleniyor")
+            # 1) Lig — varsayılan: Liga F
+            with st.spinner("Lig listesi yükleniyor…"):
+                comps = fetch_competitions()
 
-        if results.empty:
-            st.warning("⚠️ Sonuç bulunamadı.")
-            st.stop()
+            if comps.empty:
+                st.error("❌ Lig verisi alınamadı.")
+                st.stop()
 
-        # Seçenekleri "Ad · Takım  (Lig)" formatında göster
-        display_options = [
-            f"{r['player']}  ·  {r['team']}  ({r['league_label']})"
-            for _, r in results.iterrows()
-        ]
-        chosen = st.selectbox("👤 Seç", display_options, label_visibility="collapsed")
-        chosen_idx   = display_options.index(chosen)
-        chosen_row   = results.iloc[chosen_idx]
+            lig_labels  = comps["label"].tolist()
+            default_lig = next(
+                (i for i, l in enumerate(lig_labels) if "Liga F" in l), 0
+            )
+            league_label = st.selectbox("🏆 Lig", lig_labels, index=default_lig)
 
-        # Seçimden lig/takım bilgilerini otomatik çöz
-        player_name  = chosen_row["player"]
-        team         = chosen_row["team"]
-        comp_id      = int(chosen_row["competition_id"])
-        season_id    = int(chosen_row["season_id"])
-        league_label = chosen_row["league_label"]
+            sel_comp  = comps[comps["label"] == league_label].iloc[0]
+            comp_id   = int(sel_comp["competition_id"])
+            season_id = int(sel_comp["season_id"])
 
-        # ── Seçilen oyuncunun takım verilerini yükle ─────────────
-        matches       = fetch_matches(comp_id, season_id)
-        n_team_matches = int(
-            ((matches["home_team"] == team) | (matches["away_team"] == team)).sum()
-        )
-        st.caption(f"📦 {team} · {n_team_matches} maç")
+            # 2) Takım — varsayılan: Barcelona
+            with st.spinner("Takımlar yükleniyor…"):
+                matches = fetch_matches(comp_id, season_id)
 
+            teams = sorted(
+                set(matches["home_team"].tolist() + matches["away_team"].tolist())
+            )
+            default_team = next(
+                (i for i, t in enumerate(teams) if "Barcelona" in t), 0
+            )
+            team = st.selectbox("🏟 Takım", teams, index=default_team)
+
+            n_tm = int(
+                ((matches["home_team"] == team) | (matches["away_team"] == team)).sum()
+            )
+            st.caption(f"📦 {n_tm} maç · ilk yükleme ~{n_tm * 2} sn")
+
+        # ── Her iki modda da: events yükle + istatistik hesapla ───
         with st.spinner(f"'{team}' verileri yükleniyor…"):
             events = fetch_team_events(comp_id, season_id, team)
 
@@ -622,13 +651,22 @@ def main() -> None:
         )
 
         if player_pool.empty:
-            st.warning(f"⚠️ ≥ {MIN_MATCHES} maç oynayan oyuncu bulunamadı.")
+            st.warning(f"⚠️ ≥ {MIN_MATCHES} maç oynayan oyuncu yok.")
             st.stop()
 
-        # Seçilen oyuncu bu takımda yoksa en yakın eşleşmeyi bul
-        if player_name not in player_pool["player"].values:
-            st.info(f"ℹ️ {player_name} bu sezonda {MIN_MATCHES}+ maç oynamamış.")
-            player_name = player_pool["player"].iloc[0]
+        players = player_pool["player"].tolist()
+
+        if search.strip():
+            # Arama modunda oyuncu zaten seçildi; takımda yoksa uyar
+            if player_name not in players:
+                st.info(f"ℹ️ {player_name} bu sezonda {MIN_MATCHES}+ maç oynamamış.")
+                player_name = players[0]
+        else:
+            # Seçici modunda — varsayılan: Putellas
+            default_player = next(
+                (i for i, p in enumerate(players) if "Putellas" in p), 0
+            )
+            player_name = st.selectbox("👤 Oyuncu", players, index=default_player)
 
         st.markdown("---")
         st.caption(
