@@ -18,7 +18,6 @@ import json
 import os
 import warnings
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import date
 
 import numpy as np
 import pandas as pd
@@ -1075,7 +1074,7 @@ def main() -> None:
     # ── tab_profile için sidebar + ana alan ──────────────────────
     # Sidebar Streamlit'te global çalışır; tab_profile içeriği bu seçimleri kullanır.
 
-    profile_error: str | None = None
+    profile_error = None  # type: ignore[assignment]
     player_pool: pd.DataFrame = pd.DataFrame()
     player_name: str = ""
     team: str = ""
