@@ -188,7 +188,7 @@ POSITION_LABELS: dict[str, str] = {
 # BÖLÜM 3 │ VERİ YÜKLEME  (st.cache_data ile önbelleklenir)
 # ═══════════════════════════════════════════════════════════════
 
-_SD_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "players_all.json")
+_SD_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "players_all.json")
 
 
 @st.cache_data(ttl=86_400, show_spinner=False)
