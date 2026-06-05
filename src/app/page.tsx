@@ -140,11 +140,11 @@ export default function HomePage() {
         <header className="sticky top-0 z-50 bg-[#111118] border-b border-[#2a2a38]">
           <div className="max-w-7xl mx-auto px-6 h-16 flex items-center gap-4">
             <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-lg bg-[#c8a6f5] flex items-center justify-center text-lg">
-                ⚽
+              <div className="w-9 h-9 rounded-lg bg-violet-600 flex items-center justify-center text-sm font-black text-white">
+                W
               </div>
-              <span className="font-serif text-xl tracking-tight">
-                Her<span className="text-[#c8a6f5]">Game</span>
+              <span className="font-bold text-xl tracking-tight">
+                W-<span className="text-violet-400">Scope</span>
               </span>
             </div>
 

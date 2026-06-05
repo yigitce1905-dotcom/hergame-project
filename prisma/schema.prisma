@@ -1,0 +1,297 @@
+// Scout Pro — Prisma Schema
+// PostgreSQL + Prisma ORM
+// Women's Football Collective Scout Database
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─── Enums ─────────────────────────────────────────────────────────────────────
+
+enum Position {
+  GK
+  RB
+  LB
+  CB
+  RCB
+  LCB
+  DM
+  CM
+  AM
+  RM
+  LM
+  RW
+  LW
+  SS
+  CF
+}
+
+enum PlayerRole {
+  ATTACKING_BACK
+  DEFENDING_BACK
+  BALL_PLAYING_CB
+  DEFENSIVE_CM
+  CREATIVE_CM
+  BOX_TO_BOX
+  PLAYMAKER
+  WINGER
+  INSIDE_FORWARD
+  TARGET_FORWARD
+  PRESSING_FORWARD
+  SECOND_STRIKER
+  SWEEPER_KEEPER
+  SHOT_STOPPER
+}
+
+enum Foot {
+  RIGHT
+  LEFT
+  BOTH
+}
+
+enum GradeLetters {
+  AA
+  AB
+  BB
+  BC
+  CC
+  CD
+  DD
+  DE
+  EE
+  FF
+}
+
+enum TransferStatus {
+  INTERESTED
+  CONTACTED
+  NEGOTIATING
+  SIGNED
+  REJECTED
+  ON_HOLD
+}
+
+// ─── Core Models ───────────────────────────────────────────────────────────────
+
+model Player {
+  id               Int       @id @default(autoincrement())
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+
+  // Personal
+  name             String
+  birthDate        DateTime?
+  age              Int
+  birthPlace       String?
+  nationality      String
+  flag             String?
+  height           Int?      // cm
+  foot             Foot      @default(RIGHT)
+  photo_url        String?
+
+  // Club
+  currentClub      String
+  league           String
+  leagueCode       String?
+  contractEnd      DateTime?
+  agentName        String?
+  marketValue      Int       @default(0) // euros
+
+  // External
+  soccerdonnaId    String?   @unique
+  soccerdonnaUrl   String?
+
+  // Relations
+  positions        PlayerPosition[]
+  stats            PlayerStats[]
+  evaluation       ScoutEvaluation?
+  favorites        FavoritePlayer[]
+  incomingRecords  IncomingPlayer[]
+  squadSlots       SquadSlot[]
+
+  @@index([nationality])
+  @@index([currentClub])
+  @@index([contractEnd])
+  @@index([marketValue])
+}
+
+model PlayerPosition {
+  id         Int        @id @default(autoincrement())
+  player     Player     @relation(fields: [playerId], references: [id], onDelete: Cascade)
+  playerId   Int
+  position   Position
+  role       PlayerRole?
+  isPrimary  Boolean    @default(false)
+
+  @@index([playerId])
+}
+
+// ─── Per-90 Statistics ─────────────────────────────────────────────────────────
+
+model PlayerStats {
+  id          Int      @id @default(autoincrement())
+  player      Player   @relation(fields: [playerId], references: [id], onDelete: Cascade)
+  playerId    Int
+  season      String   // "2024-25"
+  competition String?
+
+  // General
+  matches     Int      @default(0)
+  minutes     Int      @default(0)
+
+  // Attack — Atatk
+  goals       Float    @default(0)
+  xG          Float    @default(0) // Expected Goals
+  xG90        Float    @default(0)
+  shots90     Float    @default(0)
+  penAreaTouch90 Float @default(0)
+  assists     Float    @default(0)
+
+  // Passing
+  passes90          Float @default(0)
+  passAccuracy      Float @default(0) // %
+  forwardPasses90   Float @default(0)
+  longPasses90      Float @default(0)
+  keyPasses90       Float @default(0)
+  smartPasses90     Float @default(0)
+  throughBalls90    Float @default(0)
+  throughBallAccuracy Float @default(0) // %
+  longPassAccuracy  Float @default(0) // %
+
+  // Carrying / Dribbling
+  dribbles90      Float @default(0)
+  dribbleSuccess  Float @default(0) // %
+  progressiveRuns90 Float @default(0)
+  carries90       Float @default(0)
+
+  // Defense
+  defActions90    Float @default(0)
+  defDuels90      Float @default(0)
+  defDuelSuccess  Float @default(0) // %
+  aerialDuels90   Float @default(0)
+  aerialSuccess   Float @default(0) // %
+  interceptions90 Float @default(0)
+  tackles90       Float @default(0)
+  pressures90     Float @default(0)
+  pressureSuccess Float @default(0) // %
+
+  // Goalkeeper (optional)
+  saves90         Float? @default(0)
+  saveRate        Float? @default(0) // %
+
+  @@index([playerId])
+  @@index([season])
+}
+
+// ─── Scout Evaluation — Custom Grading Matrix ─────────────────────────────────
+
+model ScoutEvaluation {
+  id        Int      @id @default(autoincrement())
+  player    Player   @relation(fields: [playerId], references: [id], onDelete: Cascade)
+  playerId  Int      @unique
+  evaluatedAt DateTime @default(now())
+  evaluatedBy String?
+
+  // BECERİ (Technical)
+  technicalSkill    GradeLetters @default(CC)
+  ballControl       GradeLetters @default(CC)
+  finishing         GradeLetters @default(CC)
+  passing           GradeLetters @default(CC)
+  dribbling         GradeLetters @default(CC)
+  crossing          GradeLetters @default(CC)
+  setPieces         GradeLetters @default(CC)
+
+  // BEŞERİ — Zihinsel (Mental)
+  decisionMaking    GradeLetters @default(CC)
+  positioning       GradeLetters @default(CC)
+  leadership        GradeLetters @default(CC)
+  workRate          GradeLetters @default(CC)
+  composure         GradeLetters @default(CC)
+
+  // BEŞERİ — Sosyal (Social)
+  teamwork          GradeLetters @default(CC)
+  communication     GradeLetters @default(CC)
+  attitude          GradeLetters @default(CC)
+
+  // FİZİKİ (Physical)
+  pace              GradeLetters @default(CC)
+  strength          GradeLetters @default(CC)
+  stamina           GradeLetters @default(CC)
+  agility           GradeLetters @default(CC)
+  jumping           GradeLetters @default(CC)
+
+  // TARZ (Style)
+  pressingIntensity GradeLetters @default(CC)
+  buildUpPlay       GradeLetters @default(CC)
+  defensiveShape    GradeLetters @default(CC)
+
+  // Computed score (0-100)
+  overallScore      Float?
+  overallGrade      GradeLetters?
+  notes             String?
+}
+
+// ─── Favorites & Incoming ──────────────────────────────────────────────────────
+
+model FavoritePlayer {
+  id          Int      @id @default(autoincrement())
+  player      Player   @relation(fields: [playerId], references: [id], onDelete: Cascade)
+  playerId    Int
+  addedAt     DateTime @default(now())
+  addedBy     String?
+  notes       String?
+
+  @@unique([playerId, addedBy])
+}
+
+model IncomingPlayer {
+  id             Int            @id @default(autoincrement())
+  player         Player?        @relation(fields: [playerId], references: [id])
+  playerId       Int?
+
+  // If player not yet in DB (URL-parsed but not verified)
+  rawName        String?
+  soccerdonnaUrl String?
+  rawData        Json?          // Parsed soccerdonna data before verification
+
+  recommendedBy  String
+  recommendedAt  DateTime       @default(now())
+  status         TransferStatus @default(INTERESTED)
+  notes          String?
+  priority       Int            @default(1) // 1=Low, 2=Med, 3=High
+
+  @@index([status])
+  @@index([priority])
+}
+
+// ─── Squad Building ────────────────────────────────────────────────────────────
+
+model SquadPlan {
+  id         Int         @id @default(autoincrement())
+  name       String      // "2025-26 Season Plan"
+  teamName   String
+  formation  String      @default("4-3-3") // "4-3-3", "4-2-3-1", etc.
+  season     String
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
+  slots      SquadSlot[]
+}
+
+model SquadSlot {
+  id          Int        @id @default(autoincrement())
+  plan        SquadPlan  @relation(fields: [planId], references: [id], onDelete: Cascade)
+  planId      Int
+  position    Position
+  slotIndex   Int        // 0=starter, 1=1st backup, 2=2nd backup
+  player      Player?    @relation(fields: [playerId], references: [id])
+  playerId    Int?
+  isTarget    Boolean    @default(false) // Hedef (henüz transfer edilmemiş)
+
+  @@unique([planId, position, slotIndex])
+  @@index([planId])
+}

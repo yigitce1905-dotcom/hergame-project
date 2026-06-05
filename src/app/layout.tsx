@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'HerGame — Women\'s Football Database',
-  description: 'Women\'s football player database',
+  title: 'W-Scope — Kadın Futbolu Scout Platformu',
+  description: 'Kolektif scout veri tabanı ve yönetim platformu. Kadın futboluna özel veri odaklı analiz.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
